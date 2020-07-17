@@ -1,0 +1,20 @@
+{
+  "name": "@awdware/eslint-config-nodejs",
+  "version": "0.0.2",
+  "homepage": "https://github.com/awdware/dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awdware/dev.git"
+  },
+  "description": "ESlint configuration for awdware development",
+  "scripts": {
+    "drop": "yarn publish --access public --no-git-tag-version "
+  },
+  "author": "LoaderB0T",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "@awdware/eslint-config-base": "^0.0.2"
+  }
+}
