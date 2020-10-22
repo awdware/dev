@@ -15,14 +15,15 @@ module.exports = {
     // ORIGINAL tslint.json -> "directive-selector": [true, "attribute", "app", "camelCase"],
     '@angular-eslint/directive-selector': [
       'error',
-      { type: 'attribute', prefix: 'app', style: 'camelCase' },
+      { type: 'attribute', prefix: 'awd', style: 'camelCase' },
     ],
 
     // ORIGINAL tslint.json -> "component-selector": [true, "element", "app", "kebab-case"],
     '@angular-eslint/component-selector': [
       'error',
-      { type: 'element', prefix: 'app', style: 'kebab-case' },
+      { type: 'element', prefix: 'awd', style: 'kebab-case' },
     ],
+    '@typescript-eslint/no-inferrable-types': 'off'
   },
   overrides: [
     /**
