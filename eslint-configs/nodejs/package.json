@@ -1,6 +1,6 @@
 {
   "name": "@awdware/eslint-config-nodejs",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "homepage": "https://github.com/awdware/dev",
   "repository": {
     "type": "git",
@@ -13,8 +13,7 @@
   "author": "LoaderB0T",
   "license": "MIT",
   "private": false,
-  "dependencies": {},
-  "devDependencies": {
-    "@awdware/eslint-config-base": "^0.0.2"
+  "peerDependencies": {
+    "@awdware/eslint-config-base": ">= 0"
   }
 }
