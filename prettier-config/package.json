@@ -1,0 +1,20 @@
+{
+  "name": "@awdware/prettier-config",
+  "version": "0.0.2",
+  "homepage": "https://github.com/awdware/dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awdware/dev.git"
+  },
+  "description": "Prettier config",
+  "main": ".prettierrc.json",
+  "scripts": {
+    "drop": "yarn publish --access public --no-git-tag-version "
+  },
+  "author": "LoaderB0T",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "prettier": ">= 2"
+  }
+}
