@@ -1,6 +1,6 @@
 {
   "name": "@awdware/eslint-config-angular",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/awdware/dev",
   "repository": {
     "type": "git",
@@ -10,13 +10,15 @@
   "scripts": {
     "drop": "yarn publish --access public --no-git-tag-version "
   },
+  "main": ".eslintrc.json",
   "author": "LoaderB0T",
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "@angular-eslint/eslint-plugin": ">= 1",
-    "@angular-eslint/eslint-plugin-template": ">= 1",
-    "@angular-eslint/template-parser": ">= 1",
-    "@awdware/eslint-config-base": ">= 0"
+    "@angular-eslint/builder": ">= 12.2.0",
+    "@angular-eslint/eslint-plugin": ">= 12.2.0",
+    "@angular-eslint/eslint-plugin-template": ">= 12.2.0",
+    "@angular-eslint/template-parser": ">= 12.2.0",
+    "@awdware/eslint-config-base": ">= 1"
   }
 }

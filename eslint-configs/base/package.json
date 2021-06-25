@@ -1,6 +1,6 @@
 {
   "name": "@awdware/eslint-config-base",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "homepage": "https://github.com/awdware/dev",
   "repository": {
     "type": "git",
@@ -10,6 +10,7 @@
   "scripts": {
     "drop": "yarn publish --access public --no-git-tag-version "
   },
+  "main": ".eslintrc.json",
   "author": "LoaderB0T",
   "license": "MIT",
   "private": false,
