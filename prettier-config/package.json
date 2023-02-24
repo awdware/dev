@@ -9,7 +9,7 @@
   "description": "Prettier config",
   "main": ".prettierrc.json",
   "scripts": {
-    "drop": "yarn publish --access public --no-git-tag-version "
+    "drop": "pnpm publish --access public --no-git-tag-version "
   },
   "author": "LoaderB0T",
   "license": "MIT",
