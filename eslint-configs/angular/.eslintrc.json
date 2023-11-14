@@ -1,5 +1,8 @@
 {
-  "extends": ["plugin:@angular-eslint/recommended", "@awdware/eslint-config-base"],
+  "extends": [
+    "plugin:@angular-eslint/recommended",
+    "@awdware/eslint-config-base"
+  ],
   "rules": {
     "@angular-eslint/directive-selector": [
       "error",
@@ -29,7 +32,7 @@
       "files": ["*.component.ts"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "ecmaVersion": 2020,
+        "ecmaVersion": "latest",
         "sourceType": "module"
       },
       "plugins": ["@angular-eslint/template"],
