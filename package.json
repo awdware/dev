@@ -1,0 +1,18 @@
+{
+  "name": "@awdware/dev",
+  "version": "0.0.0",
+  "homepage": "https://github.com/awdware/dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awdware/dev.git"
+  },
+  "author": "LoaderB0T",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.11.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "typescript-eslint": "^8.7.0"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@awdware/eslint-config-base",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/awdware/dev",
   "repository": {
     "type": "git",
@@ -10,14 +10,19 @@
   "scripts": {
     "drop": "pnpm publish --access public"
   },
-  "main": ".eslintrc.json",
   "author": "LoaderB0T",
   "license": "MIT",
   "private": false,
+  "exports": {
+    ".": {
+      "import": "./eslint.config.mjs",
+      "require": "./eslint.config.mjs"
+    }
+  },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">= 6",
-    "@typescript-eslint/parser": ">= 6",
-    "eslint": ">= 8",
-    "eslint-plugin-unused-imports": ">= 3"
+    "typescript-eslint": ">= 8.7",
+    "@types/eslint__js": ">= 8",
+    "eslint": ">= 9.1",
+    "eslint-plugin-unused-imports": ">= 4.1"
   }
 }
