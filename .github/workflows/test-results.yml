@@ -1,11 +1,11 @@
 name: Test Results
 
 on:
-  workflow_run:
-    workflows: ['CI']
-    types:
-      - completed
-permissions: {}
+  workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        description: "GITHUB_TOKEN"
+        required: true
 
 jobs:
   test-results:
@@ -50,4 +50,4 @@ jobs:
           commit: ${{ github.event.workflow_run.head_sha }}
           event_file: artifacts/Event File/event.json
           event_name: ${{ github.event.workflow_run.event }}
-          junit_files: 'artifacts/**/*.xml'
+          junit_files: "artifacts/**/*.xml"
