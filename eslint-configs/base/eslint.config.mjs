@@ -1,12 +1,17 @@
 import globals from "globals";
 import js from "@eslint/js";
 import unusedImports from "eslint-plugin-unused-imports";
+import importPlugin from "eslint-plugin-import";
 
 import tseslint from "typescript-eslint";
 
 export default [
   js.configs.recommended,
+  importPlugin.flatConfigs.recommended,
   ...tseslint.configs.recommended,
+  {
+    ignores: ["**/eslint.config.mjs"],
+  },
   {
     languageOptions: {
       globals: {

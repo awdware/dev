@@ -23,6 +23,7 @@
     "typescript-eslint": ">= 8.7",
     "@types/eslint__js": ">= 8",
     "eslint": ">= 9.1",
-    "eslint-plugin-unused-imports": ">= 4.1"
+    "eslint-plugin-unused-imports": ">= 4.1",
+    "eslint-plugin-import": ">= 2.30"
   }
 }

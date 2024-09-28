@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  workflow_call:
+    inputs:
+      run-tests:
+        type: boolean
+        default: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 19.x, 20.x]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install pnpm
+        run: npm i -g pnpm
+      - name: Install
+        run: pnpm i
+      - name: Build
+        run: pnpm run build
+      - name: Lint
+        run: pnpm run lint
+      - name: Test
+        run: pnpm run test
+        if: inputs.run-tests
+        env:
+          FORCE_COLOR: 1
+      - name: Upload Test Results Node.js ${{ matrix.node-version }}
+        if: matrix.node-version == '20.x'
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: Test Results
+          path: junit.xml
+  event_file:
+    name: "Event File"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: Event File
+          path: ${{ github.event_path }}
