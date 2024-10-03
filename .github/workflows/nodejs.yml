@@ -6,6 +6,9 @@ on:
       run-tests:
         type: boolean
         default: true
+      node-versions:
+        type: string
+        default: "[18.x, 19.x, 20.x]"
 
 jobs:
   build:
@@ -13,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 19.x, 20.x]
+        node-version: ${{ toJson(inputs.node-versions) }}
 
     steps:
       - uses: actions/checkout@v4
