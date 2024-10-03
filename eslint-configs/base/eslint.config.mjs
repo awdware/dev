@@ -63,6 +63,27 @@ export default [
       "prefer-template": "error",
       "@typescript-eslint/no-inferrable-types": "off",
       "@typescript-eslint/no-explicit-any": "warn",
+      "import/no-unresolved": "off",
+      "import/order": [
+        "error",
+        {
+          groups: [
+            "builtin",
+            "external",
+            "internal",
+            ["parent", "sibling", "index"],
+            "object",
+            "type",
+          ],
+          "newlines-between": "always",
+          alphabetize: {
+            order: "asc",
+            caseInsensitive: true,
+          },
+          warnOnUnassignedImports: true,
+        },
+      ],
+      "import/no-duplicates": "error",
     },
   },
 ];
