@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ${{ toJson(inputs.node-versions) }}
+        node-version: ${{ inputs.node-versions }}
 
     steps:
       - uses: actions/checkout@v4
