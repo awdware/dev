@@ -63,6 +63,8 @@ export default [
       "prefer-template": "error",
       "@typescript-eslint/no-inferrable-types": "off",
       "@typescript-eslint/no-explicit-any": "warn",
+
+      // import plugin
       "import/no-unresolved": "off",
       "import/order": [
         "error",
