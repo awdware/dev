@@ -86,6 +86,7 @@ export default [
         },
       ],
       "import/no-duplicates": "error",
+      "import/named": "off",
     },
   },
 ];
