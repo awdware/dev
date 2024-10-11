@@ -1,14 +1,12 @@
 import base from "@awdware/eslint-config-base";
 import angular from "angular-eslint";
+import tseslint from "typescript-eslint";
 
-export default [
-  {
-    ignores: ["**/*.spec.ts", "**/test.ts"],
-  },
-  ...base,
-  ...angular.configs.tsRecommended,
+export default tseslint.config(
   {
     files: ["**/*.ts"],
+    ignores: ["**/eslint.config.mjs"],
+    extends: [...base, ...angular.configs.tsRecommended],
     processor: angular.processInlineTemplates,
     rules: {
       "@angular-eslint/directive-selector": [
@@ -36,12 +34,23 @@ export default [
     },
   },
   {
-    files: ["**/*.html"],
+    files: ["**/*component.html"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
     },
-    ...angular.configs.templateRecommended,
-    ...angular.configs.templateAccessibility,
+    extends: [
+      // Apply the recommended Angular template rules
+      ...angular.configs.templateRecommended,
+      // Apply the Angular template rules which focus on accessibility of our apps
+      ...angular.configs.templateAccessibility,
+    ],
+    rules: {},
   },
-];
+  {
+    files: ["**/*.html"],
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "off",
+    },
+  }
+);
