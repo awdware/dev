@@ -8,7 +8,7 @@ on:
         default: true
       node-versions:
         type: string
-        default: '["18.x", "19.x", "20.x", "22.x"]'
+        default: "[\"18.x\", \"19.x\", \"20.x\", \"22.x\"]"
 
 jobs:
   build:
