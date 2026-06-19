@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/awdware/dev.git"
   },
+  "bugs": {
+    "url": "https://github.com/awdware/dev/issues"
+  },
   "description": "Prettier config",
   "main": ".prettierrc.json",
   "scripts": {
